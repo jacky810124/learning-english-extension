@@ -12,6 +12,18 @@
   "background": {
     "service_worker": "background.js"
   },
+  "content_scripts": [
+    {
+      "matches": ["https://swag.live/*", "https://*.swag.live/*"],
+      "js": ["content-script.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["worker.js"],
+      "matches": ["https://swag.live/*"]
+    }
+  ],
   "action": {
     "default_icon": {
       "16": "images/icon-16.png",
